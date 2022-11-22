@@ -64,5 +64,3 @@ void print_buffer(char buffer[], int *buff_ind)
 
 	*buff_ind = 0;
 }
-_printf.c
-Displaying _printf.c.
