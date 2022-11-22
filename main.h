@@ -2,6 +2,10 @@
 #define MAIN_H
 
 #include <stdarg.h>
+#include <limits.h>
+#include <unistd.h>
+#include <stdio.h>
+
 void print_buffer(char buffer[], int *buff_ind);
 int _putchar(char c);
 int _printf(const char *format, ...);
