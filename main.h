@@ -2,7 +2,7 @@
 #define MAIN_H
 
 #include <stdarg.h>
-
+void print_buffer(char buffer[], int *buff_ind);
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_c(va_list ar_list);
