@@ -29,11 +29,9 @@ struct fmt
 		char fmt;
 			int (*fn)(va_list, char[], int, int, int, int);
 };
-
-
 /**
- * typedef struct fmt fmt_t - Struct op
- *
+ * typedef struct fmt fmt_t - Struc
+*
  * @fmt: The format.
  * @fm_t: The function associated.
  */
@@ -62,8 +60,6 @@ int print_octal(va_list types, char buffer[],
 int print_hexadecimal(va_list types, char buffer[],
 			int flags, int width, int precision, int size);
 int print_hexa_upper(va_list types, char buffer[],
-			int flags, int width, int precision, int size);
-
 int print_hexa(va_list types, char map_to[],
 		char buffer[], int flags, char flag_ch, int width, int precision, int size);
 
@@ -93,6 +89,8 @@ int handle_write_char(char c, char buffer[],
 			int flags, int width, int precision, int size);
 int write_number(int is_positive, int ind, char buffer[],
 			int flags, int width, int precision, int size);
+			int flags, int width, int precision, int size);
+
 int write_num(int ind, char bff[], int flags, int width, int precision,
 			int length, char padd, char extra_c);
 int write_pointer(char buffer[], int ind, int length,
@@ -109,4 +107,39 @@ int is_digit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
-#endif
+#ifndef _MAIN_H_
+#define _MAIN_H_
+
+#include <stdarg.h>
+/**
+ * struct print - structure for printing various types
+ * @t: type to print
+ * @f: function to print
+ */
+
+typedef struct print
+{
+	char *t;
+
+	int (*f)(va_list);
+} print_t;
+
+void print_buffer(char buffer[], int *buff_ind);
+int _putchar(char c);
+int _printf(const char *format, ...);
+int print_c(va_list ar_list);
+int (*get_func(char s))(va_list ar_list);
+int print_s(va_list ar_list);
+int print_d(va_list ar_list);
+int print_i(va_list ar_numlist);
+int print_b(va_list binary_list);
+int print_u(va_list ar_list);
+int print_o(va_list ar_list);
+int print_x(va_list ar_list);
+int print_X(va_list ar_list);
+int print_p(va_list p);
+int print_S(va_list S);
+int print_r(va_list r);
+int print_R(va_list R);
+
+#endif 
