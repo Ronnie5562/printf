@@ -10,9 +10,9 @@
 .B , ...)
 .SH DESCRIPTION
 .B _printf()
-Prints to standard output under the control of a 
+Prints to standard output under the control of a
 .I format
-string that specifies how subsequent arguments are converted for output. 
+string that specifies how subsequent arguments are converted for output.
 .SH Return value
 On successful return, these functions return the number of characters printed, excluding the null byte used to end output to strings.
 
@@ -66,4 +66,4 @@ _printf("%s, %s %d, %d\\n", weekday, month, day, year);
 .SH BUGS
 No known bugs.
 .SH AUTHOR
-John Doe, Jane Doe
+Abimbola Ronald, Ukachukwu Blest.
