@@ -1,5 +1,5 @@
-#printf
-##printf is a custom implementation of the C programming function printf. This project is an application of the C programming knowledge that main School cohort 3 students have learned since starting the program on May 1, 2017.
+printf
+printf is a custom implementation of the C programming function printf.
 
 
 Prototype: int _printf(const char *, ...);
